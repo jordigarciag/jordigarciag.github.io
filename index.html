@@ -1,18 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<link rel="stylesheet" href="style.css"/>
-<title> Data Analyst Bordeaux </title>
-<meta charset="UTF-8">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordi Garcia Gomà - Portfolio Data Analyst Junior</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
 
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            color: #2196F3;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #2196F3;
+            padding-bottom: 0.5rem;
+        }
+
+        .project-info {
+            margin: 1rem 0;
+        }
+
+        .project-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .stack-tag {
+            background: #2196F3;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .project-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-features li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .project-features li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2196F3;
+        }
+
+        .btn.project-details {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #2196F3;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .btn.project-details:hover {
+            background: #1976D2;
+        }
+    </style>
+</head>
 <body>
-<h1> Bienvenue sur le site web de Data Analyst Bordeaux </h1>
-<p> Voici tous les services </p>
-<h2> Tarifs </h2>
-<p> Contact </p> 
-<a href= "http://www.wildcodeschool.com"> Lien site web de la Wild </a>
-<p> Photo </p> 
-<img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjXuukSkCt3PNnSyzsdKTwzozz18LO8pyGvw&s">
-</body> 
+    <nav>
+        <div class="nav-content">
+            <h1>Portfolio - Jordi GARCIA GOMÀ</h1>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>Data Analyst Junior</h2><br>
+            <p>🌍 Parlant couramment français, espagnol, anglais et allemand, je combine une formation technique à la Wild Code School (Python, SQL, BI, Machine Learning) avec un profil international. 💼 Basé à Bordeaux, je recherche une opportunité professionnelle à partir de mars 2025.</p>
+            <br><a href="cv.pdf" class="btn" target="_blank">Télécharger CV</a>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Mes Projets</h2>
+	<br><p> 👉 Découvrez mes projets réalisés lors de ma formation Data Analyst à la Wild Code School de Bordeaux. </p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/jordigarciag/jordigarciag.github.io/refs/heads/main/img_projet_1.png" alt="Business Dashboard">
+                    <h3>Projet 1 - Dashboard commercial</h3>
+                    <div class="project-stack">
+                        <span class="stack-tag">SQL</span>
+                        <span class="stack-tag">Power BI</span>
+                        <span class="stack-tag">MariaDB</span>
+                    </div>
+                    <div class="project-info">
+                        <p>Création d'un tableau de bord pour une entreprise de modèles et maquettes, permettant au directeur de suivre quotidiennement les KPIs essentiels dans 4 domaines : ventes, finances, logistique et ressources humaines.</p>
+                    </div>
+                    <ul class="project-features">
+                        <li>Optimisation des requêtes SQL</li>
+                        <li>Dashboard analytique des KPIs</li>
+                        <li>Visualisations interactives avec BI</li>
+                        <li>Système de suivi des stocks et finances</li>
+                    </ul>
+                    <a href="#" class="btn project-details" target="_blank">Explorer le projet</a>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/jordigarciag/jordigarciag.github.io/refs/heads/main/img_projet_2_v2.png" alt="Movie Recommendation">
+                    <h3>Projet 2 - Système de recommandation de films</h3>
+                    <div class="project-stack">
+                        <span class="stack-tag">Python</span>
+                        <span class="stack-tag">Pandas</span>
+                        <span class="stack-tag">API</span>
+			<span class="stack-tag">Scikit-learn</span>
+			<span class="stack-tag">Machine Learning</span>
+			<span class="stack-tag">Streamlit</span>
+                    </div>
+                    <div class="project-info">
+                        <p>Développement d'un système de recommandation de films pour un cinéma de la Creuse, visant à moderniser son offre et à proposer un service digital à ses clients.</p>
+                    </div>
+                    <ul class="project-features">
+			<li>Statistiques et visualisations dynamiques</li>
+                        <li>Développement du système de Machine Learning</li>
+                        <li>Interface interactive pour l'utilisateur</li>
+                    </ul>
+                    <a href="#" class="btn project-details" target="_blank">Explorer le projet</a>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/jordigarciag/jordigarciag.github.io/refs/heads/main/img_projet_3.jpg" alt="Ticket Analysis">
+                    <h3>Projet 3 - Analyse de billetterie et prédiction</h3>
+                    <div class="project-stack">
+                        <span class="stack-tag">PostgreSQL</span>
+                        <span class="stack-tag">ETL</span>
+                        <span class="stack-tag">Git</span>
+			<span class="stack-tag">Machine Learning </span>
+			<span class="stack-tag">Python</span>
+			<span class="stack-tag">Streamlit</span>
+                    </div>
+                    <div class="project-info">
+                        <p>Analyse des données réelles de billetterie d'une association culturelle bordelaise, basée sur leur historique complet de ventes de billets, pour optimiser leur programmation future et développer un système de recommandation personnalisé pour la direction de l'association.</p>
+                    </div>
+                    <ul class="project-features">
+                        <li>Collecte des données avec API et webscraping</li>
+			<li>Machine Learning pour optimiser la programmation musicale</li>
+                    </ul>
+                    <a href="#" class="btn project-details" target="_blank">Explorer le projet</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="social-links">
+                <a href="https://jordigarciag.github.io/"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jordigarciagoma"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+</body>
 </html>
